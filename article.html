@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fiche chansons</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+      margin: 0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      background-color: white;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .info-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .info-block h2 {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+      width: 100%;
+    }
+
+    .info-block p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #212529;
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: 600px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="song-title">Titre de la chanson</h1>
+  </header>
+
+  <main>
+    <div class="info-grid">
+      <div class="info-block">
+        <h2>Partie</h2>
+        <p id="partie"></p>
+      </div>
+      <div class="info-block">
+        <h2>Tonalité</h2>
+        <p id="tonalite"></p>
+      </div>
+      <div class="info-block">
+        <h2>Structure</h2>
+        <p id="structure"></p>
+      </div>
+      <div class="info-block">
+        <h2>Remarques</h2>
+        <p id="remarques"></p>
+      </div>
+      <div class="info-block">
+        <h2>Accords</h2>
+        <p id="accords"></p>
+      </div>
+    </div>
+     
+
+    <h2 style="text-align: center; margin-top: 30px;">Grille d'accords</h2>
+    <div id="grille-accords" class="grille-accords"></div>
+    
+      </div>
+  </main>
+  
+
+
+
+  <script src="js/songdata.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
